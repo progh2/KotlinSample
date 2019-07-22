@@ -5,6 +5,10 @@ public class PersonJava {
     private int age;
     private final String name;
 
+    public PersonJava(String name) {
+        this.name = name;
+    }
+
     public int getAge() {
         return age;
     }

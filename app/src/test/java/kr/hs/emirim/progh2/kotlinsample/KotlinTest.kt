@@ -8,4 +8,10 @@ class KotlinTest {
     fun test1(){
         Assert.assertEquals(4, 1+3)
     }
+    @Test
+    fun testGetterSetter(){
+        val person = Person("john")
+        person.age = 20
+        Assert.assertEquals(20, person.age)
+    }
 }
