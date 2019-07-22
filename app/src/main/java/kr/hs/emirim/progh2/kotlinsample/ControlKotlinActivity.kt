@@ -17,15 +17,9 @@ class ControlKotlinActivity : AppCompatActivity() {
             val number = numberField.text.toString().toInt()
 
             when{
-                number % 2 == 0 ->  Toast.makeText(applicationContext,
-                    "2의 배수 : ${number}",
-                    Toast.LENGTH_SHORT).show()
-                number % 3 == 0 -> Toast.makeText(applicationContext,
-                    "3의 배수 : ${number}",
-                    Toast.LENGTH_SHORT).show()
-                else -> Toast.makeText(applicationContext,
-                    "${number}",
-                    Toast.LENGTH_SHORT).show()
+                number % 2 == 0 ->  toastShort("2의 배수 : ${number}")
+                number % 3 == 0 ->  toastShort("3의 배수 : ${number}")
+                else -> toastLong("${number}")
             }
 
 //            if(number % 2 == 0){

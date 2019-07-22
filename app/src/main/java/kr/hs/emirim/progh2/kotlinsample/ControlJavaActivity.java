@@ -7,10 +7,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import static kr.hs.emirim.progh2.kotlinsample.ToastUtilJava.toastShort;
+
 public class ControlJavaActivity extends AppCompatActivity {
 
     EditText numberField;
     Button button;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,17 +30,11 @@ public class ControlJavaActivity extends AppCompatActivity {
                        numberField.getText().toString());
 
                if(number % 2 == 0){
-                   Toast.makeText(getApplicationContext(),
-                           "2의 배수 : " + number,
-                           Toast.LENGTH_SHORT).show();
+                   toastShort("2의 배수 : " + number);
                }else if(number %3 == 0){
-                   Toast.makeText(getApplicationContext(),
-                           "3의 배수 : " + number,
-                           Toast.LENGTH_SHORT).show();
+                   toastShort("3의 배수 : " + number);
                }else{
-                   Toast.makeText(getApplicationContext(),
-                           "" + number,
-                           Toast.LENGTH_SHORT).show();
+                   ToastUtilKotlinKt.toastLong("" + number);
                }
 
                switch (number){
